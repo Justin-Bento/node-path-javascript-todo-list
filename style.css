@@ -13,5 +13,5 @@
   ---gray950: "rgb(38,38,38)";
 }
 body {
-  background-color: rebeccapurple;
+  background-color: var(---gray50);
 }
