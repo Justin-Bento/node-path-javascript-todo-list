@@ -4,6 +4,8 @@
   "description": "In this project, I’m building an online to-do list. While the initial implementation will be basic, there’s plenty of room for improvement and additional features in the future later down the line. The main goal is to consolidate and apply everything I’ve learned so far into a single application. The technologies used are listed on the side, and the project will be deployed using Vercel.",
   "main": "script.js",
   "scripts": {
+    "dev": "npx webpack server",
+    "build": "npx webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
