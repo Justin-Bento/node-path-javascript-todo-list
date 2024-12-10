@@ -12,6 +12,11 @@
   ---gray900: "rgb(60,61,61)";
   ---gray950: "rgb(38,38,38)";
 }
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
 body {
   background-color: var(---gray50);
 }
