@@ -1,4 +1,4 @@
-// index.js
+import "./styles.css";
 import { greeting } from "./greeting.js";
 
-alert(greeting);
+console.log(greeting);
