@@ -1,3 +1,6 @@
+:root {
+  --border: 1.25px solid black;
+}
 body {
   color: hsl(0, 0%, 10%);
   background-color: hsl(0, 0%, 99%);
@@ -6,11 +9,21 @@ body {
 }
 header {
   padding: 1rem 0;
-  border-bottom: 1px solid black;
+  border-bottom: var(--border);
+}
+input[type="text"] {
+  border-radius: 0.25rem;
+  border: 1.25px solid black;
+  padding: 0.5rem 1rem;
+  box-shadow: none;
+  outline: none;
+}
+input[type="text"]:focus {
+  border: 1px solid orange;
 }
 .todo {
   padding: 3rem 0;
-  border-bottom: 1px solid black;
+  border-bottom: var(--border);
 }
 .todo .todo-list {
   display: flex;
@@ -32,11 +45,11 @@ header {
 }
 .tasks {
   padding: 1rem 0;
-  border-bottom: 1px solid black;
+  border-bottom: var(--border);
 }
 .completed {
   padding: 1rem 0;
-  border-bottom: 1px solid black;
+  border-bottom: var(--border);
 }
 .headline {
   font-size: 1.25rem; /* 20px */
