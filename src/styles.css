@@ -16,8 +16,8 @@
   --border: 1px solid black;
 }
 body {
-  color: hsl(0, 0%, 10%);
-  background-color: hsl(0, 0%, 99%);
+  color: var(--gray-950);
+  background-color: var(--gray-50);
   width: 30%;
   margin: 0rem auto;
 }
@@ -55,11 +55,11 @@ input[type="text"]:focus {
   font-weight: 600;
   border-radius: 0.25rem;
   border: var(--border);
-  background-color: black;
+  background-color: var(--gray-950);
 }
 .todo #item-dueDate {
   padding: 0.5rem;
-  color: black;
+  color: var(--gray-950);
   font-weight: 600;
   border-radius: 0.25rem;
   border: var(--border);
