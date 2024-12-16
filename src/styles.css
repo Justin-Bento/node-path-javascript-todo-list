@@ -28,3 +28,11 @@ form {
   font-weight: 700;
   border-radius: 0.25rem;
 }
+.container {
+  width: 30%;
+  margin: 0 auto;
+}
+.tasks {
+  margin: auto;
+  border-top: 1px solid black;
+}
