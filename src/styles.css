@@ -1,4 +1,40 @@
 body {
   color: hsl(0, 0%, 10%);
   background-color: hsl(0, 0%, 99%);
+  width: 30%;
+  margin: 0rem auto;
+}
+header {
+  padding: 1rem 0;
+  border-bottom: 1px solid black;
+}
+.todo {
+  padding: 3rem 0;
+  border-bottom: 1px solid black;
+}
+.todo .todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-top: 1rem;
+}
+.todo .todo-list:first-of-type {
+  margin-top: 1rem;
+}
+.todo .todo-list input[type="submit"] {
+  max-width: 96px;
+  padding: 0.5rem;
+  color: white;
+  font-weight: 600;
+  border-radius: 0.25rem;
+  border: transparent;
+  background-color: black;
+}
+.tasks {
+  padding: 1rem 0;
+  border-bottom: 1px solid black;
+}
+.completed {
+  padding: 1rem 0;
+  border-bottom: 1px solid black;
 }
