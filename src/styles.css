@@ -2,3 +2,29 @@ body {
   color: hsl(0, 0%, 10%);
   background-color: hsl(0, 0%, 98%);
 }
+form {
+  width: 30%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: 1;
+  gap: 1rem;
+}
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.todo-list label {
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.25rem; /* 20px */
+}
+
+.todo-list .item-post {
+  max-width: 96px;
+  padding: 0.5rem;
+  background-color: black;
+  border: transparent;
+  color: white;
+  font-weight: 700;
+  border-radius: 0.25rem;
+}
