@@ -19,6 +19,11 @@ form {
   line-height: 1.25rem; /* 20px */
 }
 
+.headline {
+  font-size: 1.25rem; /* 20px */
+  line-height: 1.75rem; /* 28px */
+  font-weight: bold;
+}
 .todo-list .item-post {
   max-width: 96px;
   padding: 0.5rem;
