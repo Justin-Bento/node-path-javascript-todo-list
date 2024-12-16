@@ -37,7 +37,10 @@ form {
   width: 30%;
   margin: 0 auto;
 }
-.tasks {
-  margin: 4rem auto;
+.border-top {
   border-top: 1px solid black;
+}
+
+.spacing-top-bottom {
+  padding: 4rem auto;
 }

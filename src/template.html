@@ -8,34 +8,33 @@
   <body>
     <header></header>
     <main class="">
-      <section class="">
+      <section class="spacing-top-bottom container">
         <h1 class="">Project: Todo List</h1>
         <p class="">JavaScript Course</p>
-        <hr />
-        <form method="post" class="container">
-          <legend class="headline">What's On Your List Today?</legend>
-          <div class="todo-list">
-            <label>Title</label>
-            <input type="text" name="item-title" id="item-title" />
-          </div>
-          <div class="todo-list">
-            <label>Description</label>
-            <input type="text" name="item-description" id="item-description" />
-          </div>
-          <div class="todo-list">
-            <label>Due Date</label>
-            <input type="date" name="item-dueDate" id="item-dueDate" />
-          </div>
-          <div class="todo-list">
-            <label>Task Priority</label>
-            <input type="text" name="item-priority" id="item-priority" />
-          </div>
-          <div class="todo-list">
-            <input type="submit" value="Add Task" class="item-post" />
-          </div>
-        </form>
       </section>
-      <section class="tasks container">
+      <form method="post" class="spacing-top-bottom border-top container">
+        <legend class="headline">What's On Your List Today?</legend>
+        <div class="todo-list">
+          <label>Title</label>
+          <input type="text" name="item-title" id="item-title" />
+        </div>
+        <div class="todo-list">
+          <label>Description</label>
+          <input type="text" name="item-description" id="item-description" />
+        </div>
+        <div class="todo-list">
+          <label>Due Date</label>
+          <input type="date" name="item-dueDate" id="item-dueDate" />
+        </div>
+        <div class="todo-list">
+          <label>Task Priority</label>
+          <input type="text" name="item-priority" id="item-priority" />
+        </div>
+        <div class="todo-list">
+          <input type="submit" value="Add Task" class="item-post" />
+        </div>
+      </form>
+      <section class="spacing-top-bottom border-top container">
         <h2 class="healdine">Tasks Doing</h2>
       </section>
     </main>
