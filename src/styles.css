@@ -38,3 +38,8 @@ header {
   padding: 1rem 0;
   border-bottom: 1px solid black;
 }
+.headline {
+  font-size: 1.25rem; /* 20px */
+  line-height: 1.75rem; /* 28px */
+  font-weight: bold;
+}
