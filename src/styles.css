@@ -83,3 +83,25 @@ input[type="text"]:focus {
   line-height: 1.75rem; /* 28px */
   font-weight: bold;
 }
+.current--task-doing {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+}
+.current--task-doing {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+}
+.current-task--completion {
+  margin-left: 10px;
+}
+.current--task-doing-title,
+.current--task-doing-description {
+  margin: 0;
+  padding: 0;
+}
+.current--task-doing-description {
+  margin: 2px 0 0 30px;
+  padding: 0;
+}
