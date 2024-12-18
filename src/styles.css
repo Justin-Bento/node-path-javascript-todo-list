@@ -54,6 +54,8 @@ header {
   border: 1px solid var(--gray-500);
   border-radius: 0.75rem;
   grid-column: span 3; /* 'span 3' is sufficient */
+  max-height: 500px;
+  overflow-y: scroll;
 }
 .completed {
   padding: 1rem 1.25rem;
