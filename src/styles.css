@@ -116,9 +116,6 @@ input[type="text"]:focus {
 .current--task-doing:first-of-type {
   margin-top: 0rem;
 }
-.current-task--completion {
-  margin-left: 10px;
-}
 .current--task-doing-title {
   margin: 0;
   padding: 0;
@@ -133,7 +130,7 @@ input[type="text"]:focus {
   line-height: 1.25rem; /* 20px */
 }
 .current--task-doing-description {
-  margin: 2px 0 0 30px;
+  margin: 2px 0 0 0px;
   padding: 0;
 }
 .task--secondary-info {

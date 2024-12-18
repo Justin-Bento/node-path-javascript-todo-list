@@ -18,19 +18,14 @@ document.addEventListener("DOMContentLoaded", () => {
     // Create a div to hold the radio button and title
     const taskDiv = NewElement("div", "current--task-doing-child");
 
-    // Create the radio button
-    const taskRadioButton = NewElement("input", "current-task--completion");
-    taskRadioButton.setAttribute("type", "radio");
-    taskRadioButton.setAttribute("name", "current-task");
-    taskRadioButton.setAttribute("id", "current-task");
-    taskRadioButton.setAttribute("value", title.value || "Untitled Task");
+    // Create the checkbox button
 
     // Create the span for the task title
     const taskTitle = NewElement("span", "current--task-doing-title");
     taskTitle.textContent = title.value || "This is my first task.";
 
     // Append the radio button and title to the div
-    taskDiv.appendChild(taskRadioButton);
+    // taskDiv.appendChild(taskRadioButton);
     taskDiv.appendChild(taskTitle);
 
     // Create the paragraph for the task description
