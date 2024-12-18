@@ -15,6 +15,14 @@
   --gray-950: #09090b;
   --border: 1px solid black;
 }
+@font-face {
+  font-family: "Schibsted Grotesk";
+  src: url("/public/fonts/SchibstedGrotesk-VariableFont_wght.ttf")
+    format("truetype");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
 body {
   color: var(--gray-950);
   background-color: var(--gray-50);
