@@ -1,3 +1,4 @@
+import "./styles/create_style.css";
 import { NewElement } from "./utilities.js";
 
 export const Create = () => {
@@ -25,14 +26,17 @@ export const Create = () => {
     taskDoingChildDescription.textContent = description.value;
     taskDoingChild.appendChild(taskDoingChildDescription);
 
+    const taskDoingChild2nd = NewElement("div", "task-doing-child2nd");
+    taskDoingChild.appendChild(taskDoingChild2nd);
+
     // Child Of Task Doing - Date
     const taskDoingChildDate = NewElement("p", "tdc-date");
     taskDoingChildDate.textContent = date.value.toString();
-    taskDoingChild.appendChild(taskDoingChildDate);
+    taskDoingChild2nd.appendChild(taskDoingChildDate);
 
     // Child Of Task Doing - Priority
     const taskDoingChildPriority = NewElement("p", "tdc-priority");
     taskDoingChildPriority.textContent = priority.value.toString();
-    taskDoingChild.appendChild(taskDoingChildPriority);
+    taskDoingChild2nd.appendChild(taskDoingChildPriority);
   });
 };
