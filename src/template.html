@@ -26,7 +26,13 @@
       </div>
       <div class="todo-list">
         <label>Task Priority</label>
-        <input type="text" name="item-priority" id="item-priority" />
+        <select name="task--item-priority" id="task--item-priority">
+          <option value="">None</option>
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+          <option value="critical">Critical</option>
+        </select>
       </div>
       <div class="todo-list">
         <input type="submit" value="Add Task" class="item-post" />
