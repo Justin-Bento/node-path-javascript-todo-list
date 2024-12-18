@@ -41,20 +41,34 @@ body {
   place-content: center;
 }
 header {
-  grid-column: span 3 / span 3;
+  grid-column: span 3; /* 'span 3' is sufficient */
 }
 .todo {
   padding: 1rem 1.25rem;
   border: 1px solid var(--gray-500);
   border-radius: 0.75rem;
+  grid-column: span 3; /* 'span 3' is sufficient */
 }
 .tasks {
   padding: 1rem 1.25rem;
   border: 1px solid var(--gray-500);
   border-radius: 0.75rem;
+  grid-column: span 3; /* 'span 3' is sufficient */
 }
 .completed {
   padding: 1rem 1.25rem;
   border: 1px solid var(--gray-500);
   border-radius: 0.75rem;
+  grid-column: span 3; /* 'span 3' is sufficient */
+}
+@media screen and (min-width: 1024px) {
+  .todo {
+    grid-column: span 1; /* 'span 3' is sufficient */
+  }
+  .tasks {
+    grid-column: span 1; /* 'span 3' is sufficient */
+  }
+  .completed {
+    grid-column: span 1; /* 'span 3' is sufficient */
+  }
 }
