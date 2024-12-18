@@ -9,6 +9,10 @@ document.addEventListener("DOMContentLoaded", () => {
   submission.addEventListener("click", (event) => {
     event.preventDefault(); // Prevent form submission
 
+    const container = document.createElement("div");
+    container.classList.add("container");
+    taskDoing.appendChild(container);
+
     // Create a new radio input
     const radioInput = document.createElement("input");
     radioInput.type = "radio";
@@ -22,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ); // Add text after the radio button
 
     // Append the labeled radio button to the tasks container
-    taskDoing.appendChild(label);
+    container.appendChild(label);
 
     // console.log(title.value +  + description.value);
   });
