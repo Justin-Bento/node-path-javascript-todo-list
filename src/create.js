@@ -1,5 +1,5 @@
 import "./styles/create_style.css";
-import { NewElement } from "./utilities.js";
+import { NewElement, Separator } from "./utilities.js";
 
 export const Create = () => {
   const title = document.querySelector("#item-title");
@@ -33,6 +33,10 @@ export const Create = () => {
     const taskDoingChildDate = NewElement("p", "tdc-date");
     taskDoingChildDate.textContent = date.value.toString();
     taskDoingChild2nd.appendChild(taskDoingChildDate);
+
+    // Child Of Task Doing - Date
+    const divider = Separator();
+    taskDoingChild2nd.appendChild(divider);
 
     // Child Of Task Doing - Priority
     const taskDoingChildPriority = NewElement("p", "tdc-priority");
