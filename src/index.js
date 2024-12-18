@@ -9,29 +9,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
   submission.addEventListener("click", (event) => {
     event.preventDefault(); // Prevent form submission
-
-    const container = NewElement("div", "container");
-    taskDoing.appendChild(container);
-
-    // Create a new radio input
-    const radioInput = NewElement("input", "task-input");
-    radioInput.type = "radio";
-    radioInput.value = title.value; // Use title value as the radio button's value
-
-    // Create a label for the radio input
-    const label = document.createElement("label");
-    label.appendChild(radioInput); // Append the radio button to the label
-    label.appendChild(
-      document.createTextNode(` ${title.value || "Untitled Task"}`)
-    ); // Add text after the radio button
-
-    const paragraph = NewElement("p", "overview");
-    paragraph.textContent = description.value;
-
-    // Append the labeled radio button to the tasks container
-    container.appendChild(label);
-    container.appendChild(paragraph);
-
-    // console.log(title.value +  + description.value);
   });
 });
