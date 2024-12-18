@@ -32,68 +32,29 @@
 body {
   color: var(--gray-950);
   background-color: var(--gray-50);
-  width: 30%;
+  width: 90%;
   margin: 0rem auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  min-height: 100dvh;
+  place-content: center;
 }
 header {
-  padding: 1rem 0;
-  border-bottom: var(--border);
-}
-input[type="text"] {
-  border-radius: 0.25rem;
-  border: var(--border);
-  padding: 0.5rem 1rem;
-  box-shadow: none;
-  outline: none;
-}
-input[type="text"]:focus {
-  border: 1px solid orange;
+  grid-column: span 3 / span 3;
 }
 .todo {
-  padding: 3rem 0;
-  border-bottom: var(--border);
-}
-.todo .todo-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-  margin-top: 1rem;
-}
-.todo .todo-list:first-of-type {
-  margin-top: 1rem;
-}
-.todo .todo-list input[type="submit"] {
-  max-width: 96px;
-  padding: 0.5rem;
-  color: white;
-  font-weight: 600;
-  border-radius: 0.25rem;
-  border: var(--border);
-  background-color: var(--gray-950);
-}
-.todo .todo-list input[type="submit"]:hover {
-  cursor: pointer;
-  background-color: var(--gray-800);
-}
-.todo #item-dueDate {
-  padding: 0.5rem;
-  color: var(--gray-950);
-  font-weight: 600;
-  border-radius: 0.25rem;
-  border: var(--border);
-  background-color: white;
-  text-transform: uppercase;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--gray-500);
+  border-radius: 0.75rem;
 }
 .tasks {
-  padding: 1rem 0;
-  border-bottom: var(--border);
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--gray-500);
+  border-radius: 0.75rem;
 }
 .completed {
-  padding: 1rem 0;
-  border-bottom: var(--border);
-}
-.headline {
-  font-size: 1.25rem; /* 20px */
-  line-height: 1.75rem; /* 28px */
-  font-weight: bold;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--gray-500);
+  border-radius: 0.75rem;
 }

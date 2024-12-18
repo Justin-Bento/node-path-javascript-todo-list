@@ -1,3 +1,19 @@
+.todo div {
+  margin-top: 1rem;
+}
+.todo div:first-of-type {
+  margin-top: 0;
+}
+.todo div:nth-child(5) {
+  margin-bottom: 2rem;
+}
+.todo-list {
+  display: flex;
+  flex-direction: column;
+}
+.todo-list input[type="text"] {
+  display: block;
+}
 .current--task-doing {
   display: flex;
   align-items: start;
