@@ -108,13 +108,15 @@ input[type="text"]:focus {
 .current--task-doing-title {
   margin: 0;
   padding: 0;
-  font-size: 1rem;
+  font-size: 1rem; /* 16px */
+  line-height: 1.5rem; /* 24px */
   font-weight: bold;
 }
 .current--task-doing-description {
   margin: 0;
   padding: 0;
-  font-size: 0.875rem;
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.25rem; /* 20px */
 }
 .current--task-doing-description {
   margin: 2px 0 0 30px;
