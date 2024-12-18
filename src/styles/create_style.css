@@ -38,3 +38,6 @@
   line-height: 1.25rem; /* 20px */
   color: var(--gray-600);
 }
+.tdc-priority {
+  text-transform: capitalize;
+}
