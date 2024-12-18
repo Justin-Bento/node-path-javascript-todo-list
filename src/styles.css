@@ -23,6 +23,11 @@
   font-weight: 100 900;
   font-display: swap;
 }
+*,
+*::after,
+*::before {
+  font-family: "Schibsted Grotesk", Arial, Helvetica, sans-serif;
+}
 body {
   color: var(--gray-950);
   background-color: var(--gray-50);
