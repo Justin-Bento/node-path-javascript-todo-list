@@ -7,6 +7,10 @@ const taskDoing = document.querySelector(".tasks-doing");
 document.addEventListener("DOMContentLoaded", () => {
   submission.addEventListener("click", (event) => {
     event.preventDefault();
-    console.log(title.value);
+
+    const taskDoingRadio = document.createElement("input");
+    taskDoingRadio.type = "radio";
+
+    taskDoing.appendChild(taskDoingRadio);
   });
 });
