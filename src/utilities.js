@@ -3,3 +3,9 @@ export function NewElement(element, className) {
   newElement.classList.add(className);
   return newElement;
 }
+
+export function Separator() {
+  const separator = NewElement("p", "bullet-point");
+  separator.textContent = "•";
+  return separator;
+}
