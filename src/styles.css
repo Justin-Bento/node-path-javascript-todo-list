@@ -92,6 +92,15 @@ input[type="text"]:focus {
   display: flex;
   align-items: start;
   flex-direction: column;
+  border: 1px solid var(--gray-400);
+  margin-top: 1.5rem;
+  padding: 1rem 1.25rem; /* 16px */
+  overflow: hidden;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+.current--task-doing:first-of-type {
+  margin-top: 0rem;
 }
 .current-task--completion {
   margin-left: 10px;
