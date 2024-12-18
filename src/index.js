@@ -2,6 +2,7 @@ import "./styles.css";
 
 document.addEventListener("DOMContentLoaded", () => {
   const title = document.querySelector("#item-title");
+  const description = document.querySelector("#item-description");
   const submission = document.querySelector(".item-post");
   const taskDoing = document.querySelector(".tasks-doing");
 
@@ -22,5 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Append the labeled radio button to the tasks container
     taskDoing.appendChild(label);
+
+    // console.log(title.value +  + description.value);
   });
 });
