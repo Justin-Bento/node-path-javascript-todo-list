@@ -1,4 +1,5 @@
 import "./styles.css";
+import { NewElement } from "./utilities.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const title = document.querySelector("#item-title");
@@ -6,11 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const submission = document.querySelector(".item-post");
   const taskDoing = document.querySelector(".tasks-doing");
 
-  function NewElement(element, className) {
-    const newElement = document.createElement(element);
-    newElement.classList.add(className);
-    return newElement;
-  }
   submission.addEventListener("click", (event) => {
     event.preventDefault(); // Prevent form submission
 
@@ -18,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     taskDoing.appendChild(container);
 
     // Create a new radio input
-    const radioInput = document.createElement("input");
+    const radioInput = NewElement("input", "task-input");
     radioInput.type = "radio";
     radioInput.value = title.value; // Use title value as the radio button's value
 
@@ -29,8 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
       document.createTextNode(` ${title.value || "Untitled Task"}`)
     ); // Add text after the radio button
 
-    const paragraph = document.createElement("p");
-    paragraph.classList.add("overview");
+    const paragraph = NewElement("p", "overview");
     paragraph.textContent = description.value;
 
     // Append the labeled radio button to the tasks container
