@@ -11,6 +11,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const taskDoingRadio = document.createElement("input");
     taskDoingRadio.type = "radio";
 
-    taskDoing.appendChild(taskDoingRadio);
+    // Create a label for the radio input
+    const label = document.createElement("label");
+    label.textContent = title.value || "Untitled Task"; // Fallback for empty input
+    label.appendChild(taskDoingRadio);
+
+    taskDoing.appendChild(label);
   });
 });
