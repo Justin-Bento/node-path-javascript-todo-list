@@ -6,11 +6,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const submission = document.querySelector(".item-post");
   const taskDoing = document.querySelector(".tasks-doing");
 
+  function NewElement(element, className) {
+    const newElement = document.createElement(element);
+    newElement.classList.add(className);
+    return newElement;
+  }
   submission.addEventListener("click", (event) => {
     event.preventDefault(); // Prevent form submission
 
-    const container = document.createElement("div");
-    container.classList.add("container");
+    const container = NewElement("div", "container");
     taskDoing.appendChild(container);
 
     // Create a new radio input
