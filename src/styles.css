@@ -96,10 +96,16 @@ input[type="text"]:focus {
 .current-task--completion {
   margin-left: 10px;
 }
-.current--task-doing-title,
+.current--task-doing-title {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: bold;
+}
 .current--task-doing-description {
   margin: 0;
   padding: 0;
+  font-size: 0.875rem;
 }
 .current--task-doing-description {
   margin: 2px 0 0 30px;
@@ -109,7 +115,7 @@ input[type="text"]:focus {
   display: flex;
   gap: 1rem;
   align-items: center;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   border-top: 1px sold #71717a;
   margin-left: 30px;
 }
