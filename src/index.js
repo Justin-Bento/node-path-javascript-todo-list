@@ -25,8 +25,13 @@ document.addEventListener("DOMContentLoaded", () => {
       document.createTextNode(` ${title.value || "Untitled Task"}`)
     ); // Add text after the radio button
 
+    const paragraph = document.createElement("p");
+    paragraph.classList.add("overview");
+    paragraph.textContent = description.value;
+
     // Append the labeled radio button to the tasks container
     container.appendChild(label);
+    container.appendChild(paragraph);
 
     // console.log(title.value +  + description.value);
   });
