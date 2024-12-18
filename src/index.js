@@ -4,5 +4,7 @@ const title = document.querySelector("#item-title");
 const submission = document.querySelector(".item-post");
 
 document.addEventListener("DOMContentLoaded", () => {
-  console.log(title);
+  submission.addEventListener("click", (event) => {
+    event.preventDefault();
+  });
 });
