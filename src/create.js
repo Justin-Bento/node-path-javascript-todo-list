@@ -1,6 +1,5 @@
 import "./styles/create_style.css";
 import { NewElement, Separator } from "./utilities.js";
-import { Delete } from "./delete.js";
 
 export const Create = () => {
   const title = document.querySelector("#item-title");
