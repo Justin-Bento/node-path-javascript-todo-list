@@ -45,7 +45,7 @@ export const Create = () => {
     taskDoingChild2nd.appendChild(taskDoingChildPriority);
 
     // ------------------------------------------------------------
-    //    Code For Deleting Individual Tasks
+    //    Code For Deleting Tasks
     // ------------------------------------------------------------
 
     // Child Of Task Doing - Priority
