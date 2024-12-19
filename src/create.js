@@ -53,14 +53,20 @@ export const Create = () => {
     taskDoingChildAction.textContent = "Delete";
     taskDoingChild2nd.appendChild(taskDoingChildAction);
 
-    // Add click event listener to delete buttons
-    const deleteButtons = document.querySelectorAll(".tdc-delete");
-
     // Initialize a counter for unique data-id values
     let idCounter = 1;
     const taskContainers = document.querySelectorAll(".task-doing-child");
     taskContainers.forEach((task) => {
       task.setAttribute("data-id", idCounter++);
+    });
+
+    // Add click event listener to delete buttons
+    const deleteButtons = document.querySelectorAll(".tdc-delete");
+
+    deleteButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        console.log("I'm going to delete you.");
+      });
     });
     // End of Code
   });
