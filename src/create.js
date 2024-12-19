@@ -44,7 +44,25 @@ export const Create = () => {
     taskDoingChildPriority.textContent = priority.value.toString();
     taskDoingChild2nd.appendChild(taskDoingChildPriority);
 
-    // Code For Deleting Individual Tasks
-    Delete;
+    // ------------------------------------------------------------
+    //    Code For Deleting Individual Tasks
+    // ------------------------------------------------------------
+
+    // Child Of Task Doing - Priority
+    const taskDoingChildAction = NewElement("button", "tdc-delete");
+    taskDoingChildAction.textContent = "Delete";
+    taskDoingChild2nd.appendChild(taskDoingChildAction);
+
+    // Add click event listener to delete buttons
+    const deleteButtons = document.querySelectorAll(".tdc-delete");
+    deleteButtons.forEach((button) => {
+      button.addEventListener("click", (event) => {
+        // Find the parent element to remove
+        const parentElement = button.closest(".task-doing-child"); // Adjust selector as needed
+        if (parentElement) {
+          parentElement.remove(); // Remove the parent element from the DOM
+        }
+      });
+    });
   });
 };
