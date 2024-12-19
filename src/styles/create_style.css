@@ -141,3 +141,22 @@
   text-decoration: underline;
   background-color: #1d4ed8; /* Tailwind CSS - Blue 700 */
 }
+
+.tdc-complete {
+  background-color: #047857; /* Tailwind CSS - Green 700 */
+  color: white;
+  font-weight: bold;
+  padding: 0.2rem 0.8rem;
+  border: none;
+  box-shadow: none;
+  border-radius: 0.125rem;
+  text-transform: capitalize;
+}
+.tdc-complete:hover {
+  cursor: pointer;
+  background-color: #115e59; /* Tailwind CSS - Green 800 */
+}
+.tdc-complete:active {
+  text-decoration: underline;
+  background-color: #047857; /* Tailwind CSS - Green 700 */
+}
