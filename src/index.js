@@ -35,16 +35,34 @@ document.addEventListener("DOMContentLoaded", () => {
     taskDoingChildDate.textContent = date.value.toString();
     taskDoingChild2nd.appendChild(taskDoingChildDate);
 
+    // --------------------------------------------------
+    // Update
+    // --------------------------------------------------
+
     const divider = Separator();
     taskDoingChild2nd.appendChild(divider);
+
+    const taskDoingChildPriority = NewElement("p", "tdc-priority");
+    taskDoingChildPriority.textContent = priority.value.toString();
+    taskDoingChild2nd.appendChild(taskDoingChildPriority);
+
+    // --------------------------------------------------
+    // Update
+    // --------------------------------------------------
+
+    const divider2 = Separator();
+    taskDoingChild2nd.appendChild(divider2);
+
+    const taskDoingChildUpdate = NewElement("button", "tdc-update");
+    taskDoingChildUpdate.textContent = "update";
+    taskDoingChild2nd.appendChild(taskDoingChildUpdate);
 
     // --------------------------------------------------
     // Delete
     // --------------------------------------------------
 
-    const taskDoingChildPriority = NewElement("p", "tdc-priority");
-    taskDoingChildPriority.textContent = priority.value.toString();
-    taskDoingChild2nd.appendChild(taskDoingChildPriority);
+    const divider3 = Separator();
+    taskDoingChild2nd.appendChild(divider3);
 
     const taskDoingChildAction = NewElement("button", "tdc-delete");
     taskDoingChildAction.textContent = "Delete";
@@ -60,5 +78,15 @@ document.addEventListener("DOMContentLoaded", () => {
         taskToDelete.remove();
       }
     });
+
+    // --------------------------------------------------
+    // Complete
+    // --------------------------------------------------
+    const divider4 = Separator();
+    taskDoingChild2nd.appendChild(divider4);
+
+    const taskDoingChildComplete = NewElement("button", "tdc-complete");
+    taskDoingChildComplete.textContent = "Complete";
+    taskDoingChild2nd.appendChild(taskDoingChildComplete);
   });
 });
