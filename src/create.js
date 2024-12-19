@@ -64,10 +64,18 @@ export const Create = () => {
     const deleteButtons = document.querySelectorAll(".tdc-delete");
 
     deleteButtons.forEach((button) => {
-      button.addEventListener("click", () => {
-        console.log("I'm going to delete you.");
+      button.addEventListener("click", (event) => {
+        event.preventDefault();
+        // Find the parent task container of the clicked button
+        const taskToDelete = button.closest(".task-doing-child");
+
+        // Check if the task container exists and remove it
+        if (taskToDelete) {
+          taskToDelete.remove();
+        }
       });
     });
+
     // End of Code
   });
 };
