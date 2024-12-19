@@ -55,14 +55,13 @@ export const Create = () => {
 
     // Add click event listener to delete buttons
     const deleteButtons = document.querySelectorAll(".tdc-delete");
-    deleteButtons.forEach((button) => {
-      button.addEventListener("click", (event) => {
-        // Find the parent element to remove
-        const parentElement = button.closest(".task-doing-child"); // Adjust selector as needed
-        if (parentElement) {
-          parentElement.remove(); // Remove the parent element from the DOM
-        }
-      });
+
+    // Initialize a counter for unique data-id values
+    let idCounter = 1;
+    const taskContainers = document.querySelectorAll(".task-doing-child");
+    taskContainers.forEach((task) => {
+      task.setAttribute("data-id", idCounter++);
     });
+    // End of Code
   });
 };
