@@ -87,8 +87,8 @@
   font-weight: bold;
 }
 .task-doing-child p {
-  font-size: 0.875rem; /* 14px */
-  line-height: 1.25rem; /* 20px */
+  font-size: 0.75rem; /* 12px */
+  line-height: 1rem; /* 16px */
 }
 .task-doing-child2nd {
   display: flex;
@@ -113,6 +113,8 @@
   border: none;
   box-shadow: none;
   border-radius: 0.125rem;
+  font-size: 0.75rem; /* 12px */
+  line-height: 1rem; /* 16px */
 }
 .tdc-delete:hover {
   cursor: pointer;
@@ -132,6 +134,8 @@
   box-shadow: none;
   border-radius: 0.125rem;
   text-transform: capitalize;
+  font-size: 0.75rem; /* 12px */
+  line-height: 1rem; /* 16px */
 }
 .tdc-update:hover {
   cursor: pointer;
@@ -151,6 +155,8 @@
   box-shadow: none;
   border-radius: 0.125rem;
   text-transform: capitalize;
+  font-size: 0.75rem; /* 12px */
+  line-height: 1rem; /* 16px */
 }
 .tdc-complete:hover {
   cursor: pointer;
