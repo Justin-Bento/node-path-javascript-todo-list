@@ -104,3 +104,21 @@
 .tdc-priority {
   text-transform: capitalize;
 }
+
+.tdc-delete {
+  background-color: hsl(0, 72%, 51%);
+  color: white;
+  font-weight: bold;
+  padding: 0.2rem 0.8rem;
+  border: none;
+  box-shadow: none;
+  border-radius: 0.125rem;
+}
+.tdc-delete:hover {
+  cursor: pointer;
+  background-color: hsl(0, 74%, 42%);
+}
+.tdc-delete:active {
+  text-decoration: underline;
+  background-color: hsl(0, 72%, 51%);
+}
