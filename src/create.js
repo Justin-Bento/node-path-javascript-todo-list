@@ -1,5 +1,6 @@
 import "./styles/create_style.css";
 import { NewElement, Separator } from "./utilities.js";
+import { Delete } from "./delete.js";
 
 export const Create = () => {
   const title = document.querySelector("#item-title");
@@ -42,5 +43,8 @@ export const Create = () => {
     const taskDoingChildPriority = NewElement("p", "tdc-priority");
     taskDoingChildPriority.textContent = priority.value.toString();
     taskDoingChild2nd.appendChild(taskDoingChildPriority);
+
+    // Code For Deleting Individual Tasks
+    Delete;
   });
 };
