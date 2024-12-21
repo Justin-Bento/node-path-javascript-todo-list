@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const date = document.querySelector("#item-dueDate");
   const priority = document.querySelector("#task--item-priority");
   const submission = document.querySelector(".item-post");
-  const taskDoing = document.querySelector(".tasks-doing");
+  const taskContainer = document.querySelector(".tasks-doing");
 
   submission.addEventListener("click", (event) => {
     event.preventDefault();
@@ -17,63 +17,64 @@ document.addEventListener("DOMContentLoaded", () => {
     // Create
     // --------------------------------------------------
 
-    const taskDoingChild = NewElement("div", "task-doing-child");
-    taskDoing.appendChild(taskDoingChild);
+    const taskContainerChild = NewElement("div", "task-doing-child");
+    taskContainer.appendChild(taskContainerChild);
 
-    const taskDoingChildTitle = NewElement("h3", "tdc-title");
-    taskDoingChildTitle.textContent = title.value;
-    taskDoingChild.appendChild(taskDoingChildTitle);
+    const taskContainerChildTitle = NewElement("h3", "tdc-title");
+    taskContainerChildTitle.textContent = title.value;
+    taskContainerChild.appendChild(taskContainerChildTitle);
 
-    const taskDoingChildDescription = NewElement("p", "tdc-description");
-    taskDoingChildDescription.textContent = description.value;
-    taskDoingChild.appendChild(taskDoingChildDescription);
+    const taskContainerChildDescription = NewElement("p", "tdc-description");
+    taskContainerChildDescription.textContent = description.value;
+    taskContainerChild.appendChild(taskContainerChildDescription);
 
-    const taskDoingChild2nd = NewElement("div", "task-doing-child2nd");
-    taskDoingChild.appendChild(taskDoingChild2nd);
+    const taskContainerChild2nd = NewElement("div", "task-doing-child2nd");
+    taskContainerChild.appendChild(taskContainerChild2nd);
 
-    const taskDoingChildDate = NewElement("p", "tdc-date");
-    taskDoingChildDate.textContent = date.value.toString();
-    taskDoingChild2nd.appendChild(taskDoingChildDate);
+    const taskContainerChildDate = NewElement("p", "tdc-date");
+    taskContainerChildDate.textContent = date.value.toString();
+    taskContainerChild2nd.appendChild(taskContainerChildDate);
 
     // --------------------------------------------------
     // Update
     // --------------------------------------------------
 
     const divider = Separator();
-    taskDoingChild2nd.appendChild(divider);
+    taskContainerChild2nd.appendChild(divider);
 
-    const taskDoingChildPriority = NewElement("p", "tdc-priority");
-    taskDoingChildPriority.textContent = priority.value.toString();
-    taskDoingChild2nd.appendChild(taskDoingChildPriority);
+    const taskContainerChildPriority = NewElement("p", "tdc-priority");
+    taskContainerChildPriority.textContent = priority.value.toString();
+    taskContainerChild2nd.appendChild(taskContainerChildPriority);
 
     // --------------------------------------------------
     // Update
     // --------------------------------------------------
 
     const divider2 = Separator();
-    taskDoingChild2nd.appendChild(divider2);
+    taskContainerChild2nd.appendChild(divider2);
 
-    const taskDoingChildUpdate = NewElement("button", "tdc-update");
-    taskDoingChildUpdate.textContent = "update";
-    taskDoingChild2nd.appendChild(taskDoingChildUpdate);
+    const taskContainerChildUpdate = NewElement("button", "tdc-update");
+    taskContainerChildUpdate.textContent = "update";
+    taskContainerChild2nd.appendChild(taskContainerChildUpdate);
 
     // --------------------------------------------------
     // Delete
     // --------------------------------------------------
 
     const divider3 = Separator();
-    taskDoingChild2nd.appendChild(divider3);
+    taskContainerChild2nd.appendChild(divider3);
 
-    const taskDoingChildAction = NewElement("button", "tdc-delete");
-    taskDoingChildAction.textContent = "Delete";
-    taskDoingChild2nd.appendChild(taskDoingChildAction);
+    const taskContainerChildAction = NewElement("button", "tdc-delete");
+    taskContainerChildAction.textContent = "Delete";
+    taskContainerChild2nd.appendChild(taskContainerChildAction);
 
     let idCounter = 1;
-    taskDoingChild.setAttribute("data-id", idCounter++);
+    taskContainerChild.setAttribute("data-id", idCounter++);
 
-    taskDoingChildAction.addEventListener("click", (event) => {
+    taskContainerChildAction.addEventListener("click", (event) => {
       event.preventDefault();
-      const taskToDelete = taskDoingChildAction.closest(".task-doing-child");
+      const taskToDelete =
+        taskContainerChildAction.closest(".task-doing-child");
       if (taskToDelete) {
         taskToDelete.remove();
       }
@@ -83,14 +84,14 @@ document.addEventListener("DOMContentLoaded", () => {
     // Complete
     // --------------------------------------------------
     const divider4 = Separator();
-    taskDoingChild2nd.appendChild(divider4);
+    taskContainerChild2nd.appendChild(divider4);
 
-    const taskDoingChildComplete = NewElement("button", "tdc-complete");
-    taskDoingChildComplete.textContent = "Complete";
-    taskDoingChild2nd.appendChild(taskDoingChildComplete);
+    const taskContainerChildComplete = NewElement("button", "tdc-complete");
+    taskContainerChildComplete.textContent = "Complete";
+    taskContainerChild2nd.appendChild(taskContainerChildComplete);
     function moveToComplete() {
       console.log("Move to complete");
     }
-    taskDoingChildComplete.addEventListener("click", moveToComplete);
+    taskContainerChildComplete.addEventListener("click", moveToComplete);
   });
 });
