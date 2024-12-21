@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const priority = document.querySelector("#task--item-priority");
   const submission = document.querySelector(".item-post");
   const taskCard = document.querySelector(".tasks-doing");
+  const taskCompleted = document.querySelector(".tasks-completed");
 
   submission.addEventListener("click", (event) => {
     event.preventDefault();
@@ -88,9 +89,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const taskComplete = NewElement("button", "tdc-complete");
     taskComplete.textContent = "Complete";
     taskNestedContainer.appendChild(taskComplete);
-    function moveToComplete() {
-      console.log("Move to complete");
-    }
-    taskComplete.addEventListener("click", moveToComplete);
+    taskComplete.addEventListener("click", () => {
+      const taskToMove = taskComplete.closest(".task-doing-child");
+      if (taskToMove) {
+        // Remove from tasks-doing
+        taskToMove.remove();
+        // Add to tasks-completed
+        taskCompleted.appendChild(taskToMove);
+        // Optional: Change the styling or remove complete button
+        taskToMove.classList.remove("task-doing-child");
+        taskToMove.classList.add("task-completed-child");
+        taskComplete.remove(); // Remove the complete button since task is completed
+      }
+    });
   });
 });
