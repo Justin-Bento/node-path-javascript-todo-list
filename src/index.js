@@ -17,59 +17,59 @@ document.addEventListener("DOMContentLoaded", () => {
     // Create
     // --------------------------------------------------
 
-    const taskCardChild = NewElement("div", "task-doing-child");
-    taskCard.appendChild(taskCardChild);
+    const taskContainer = NewElement("div", "task-doing-child");
+    taskCard.appendChild(taskContainer);
 
-    const taskCardChildTitle = NewElement("h3", "tdc-title");
-    taskCardChildTitle.textContent = title.value;
-    taskCardChild.appendChild(taskCardChildTitle);
+    const taskTitle = NewElement("h3", "tdc-title");
+    taskTitle.textContent = title.value;
+    taskContainer.appendChild(taskTitle);
 
-    const taskCardChildDescription = NewElement("p", "tdc-description");
-    taskCardChildDescription.textContent = description.value;
-    taskCardChild.appendChild(taskCardChildDescription);
+    const taskDescription = NewElement("p", "tdc-description");
+    taskDescription.textContent = description.value;
+    taskContainer.appendChild(taskDescription);
 
-    const taskCardChild2nd = NewElement("div", "task-doing-child2nd");
-    taskCardChild.appendChild(taskCardChild2nd);
+    const taskNestedContainer = NewElement("div", "task-doing-nested");
+    taskContainer.appendChild(taskNestedContainer);
 
-    const taskCardChildDate = NewElement("p", "tdc-date");
-    taskCardChildDate.textContent = date.value.toString();
-    taskCardChild2nd.appendChild(taskCardChildDate);
+    const taskContainerDate = NewElement("p", "tdc-date");
+    taskContainerDate.textContent = date.value.toString();
+    taskNestedContainer.appendChild(taskContainerDate);
 
     // --------------------------------------------------
     // Update
     // --------------------------------------------------
 
     const divider = Separator();
-    taskCardChild2nd.appendChild(divider);
+    taskNestedContainer.appendChild(divider);
 
-    const taskCardChildPriority = NewElement("p", "tdc-priority");
-    taskCardChildPriority.textContent = priority.value.toString();
-    taskCardChild2nd.appendChild(taskCardChildPriority);
+    const taskPriority = NewElement("p", "tdc-priority");
+    taskPriority.textContent = priority.value.toString();
+    taskNestedContainer.appendChild(taskPriority);
 
     // --------------------------------------------------
     // Update
     // --------------------------------------------------
 
     const divider2 = Separator();
-    taskCardChild2nd.appendChild(divider2);
+    taskNestedContainer.appendChild(divider2);
 
-    const taskCardChildUpdate = NewElement("button", "tdc-update");
-    taskCardChildUpdate.textContent = "update";
-    taskCardChild2nd.appendChild(taskCardChildUpdate);
+    const taskUpdate = NewElement("button", "tdc-update");
+    taskUpdate.textContent = "update";
+    taskNestedContainer.appendChild(taskUpdate);
 
     // --------------------------------------------------
     // Delete
     // --------------------------------------------------
 
     const divider3 = Separator();
-    taskCardChild2nd.appendChild(divider3);
+    taskNestedContainer.appendChild(divider3);
 
     const taskDelete = NewElement("button", "tdc-delete");
     taskDelete.textContent = "Delete";
-    taskCardChild2nd.appendChild(taskDelete);
+    taskNestedContainer.appendChild(taskDelete);
 
     let idCounter = 1;
-    taskCardChild.setAttribute("data-id", idCounter++);
+    taskContainer.setAttribute("data-id", idCounter++);
 
     taskDelete.addEventListener("click", (event) => {
       event.preventDefault();
@@ -83,14 +83,14 @@ document.addEventListener("DOMContentLoaded", () => {
     // Complete
     // --------------------------------------------------
     const divider4 = Separator();
-    taskCardChild2nd.appendChild(divider4);
+    taskNestedContainer.appendChild(divider4);
 
-    const taskCardChildComplete = NewElement("button", "tdc-complete");
-    taskCardChildComplete.textContent = "Complete";
-    taskCardChild2nd.appendChild(taskCardChildComplete);
+    const taskComplete = NewElement("button", "tdc-complete");
+    taskComplete.textContent = "Complete";
+    taskNestedContainer.appendChild(taskComplete);
     function moveToComplete() {
       console.log("Move to complete");
     }
-    taskCardChildComplete.addEventListener("click", moveToComplete);
+    taskComplete.addEventListener("click", moveToComplete);
   });
 });
