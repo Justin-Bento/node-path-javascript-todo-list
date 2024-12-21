@@ -1,6 +1,6 @@
 import "./styles.css";
 import "./styles/create_style.css";
-import { NewElement, Separator } from "./utilities.js";
+import { NewElement, Separator, colors } from "./utilities.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const title = document.querySelector("#item-title");
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     taskContainer.style.display = "flex";
     taskContainer.style.alignItems = "start";
     taskContainer.style.flexDirection = "column";
-    taskContainer.style.border = "1px solid #a1a1aa";
+    taskContainer.style.border = `1px solid ${colors.gray[400]}`;
     taskContainer.style.margin = "1rem 0 0 0";
     taskContainer.style.padding = "1rem 1.25rem";
     taskContainer.style.overflow = "hidden";
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
     taskNestedContainer.style.padding = "0";
     taskNestedContainer.style.fontSize = "0.75rem";
     taskNestedContainer.style.lineHeight = "1.25rem";
-    taskNestedContainer.style.color = "#52525b";
+    taskNestedContainer.style.color = colors.gray[500];
     taskContainer.appendChild(taskNestedContainer);
 
     const taskContainerDate = NewElement("p", "tdc-date");
@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const taskUpdate = NewElement("button", "tdc-update");
     taskUpdate.textContent = "Update";
     taskUpdate.style.backgroundColor = "#1d4ed8";
-    taskUpdate.style.color = "white";
+    taskUpdate.style.color = colors.white;
     taskUpdate.style.fontWeight = "bold";
     taskUpdate.style.padding = "0.2rem 0.8rem";
     taskUpdate.style.border = "none";
@@ -153,9 +153,9 @@ document.addEventListener("DOMContentLoaded", () => {
         // Optional: Change the styling or remove complete button
         taskToMove.classList.remove("task-doing-child");
         taskToMove.classList.add("task-completed-child");
-        taskComplete.style.backgroundColor = "#a1a1aa";
-        taskUpdate.style.backgroundColor = "#a1a1aa";
-        taskDelete.style.backgroundColor = "#a1a1aa";
+        taskComplete.style.backgroundColor = colors.gray[400];
+        taskUpdate.style.backgroundColor = colors.gray[400];
+        taskDelete.style.backgroundColor = colors.gray[400];
         taskComplete.style.color = "white";
         taskComplete.style.fontWeight = "bold";
         taskComplete.style.padding = "0.2rem 0.8rem";
@@ -165,11 +165,7 @@ document.addEventListener("DOMContentLoaded", () => {
         taskComplete.style.fontSize = "0.75rem";
         taskComplete.style.lineHeight = "1rem";
         let taskCompleteChild = document.querySelector(".task-completed-child");
-        taskCompleteChild.style.borderWidth = "1px";
-        taskCompleteChild.style.borderWidth = "1px";
-        taskCompleteChild.style.borderStyle = "solid";
-        taskCompleteChild.style.borderColor = "black";
-        taskCompleteChild.style.fontSize = "1rem";
+        taskCompleteChild.style.border = `1px solid ${colors.gray[200]}`;
       }
     });
   });
