@@ -64,16 +64,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const divider3 = Separator();
     taskCardChild2nd.appendChild(divider3);
 
-    const taskCardChildAction = NewElement("button", "tdc-delete");
-    taskCardChildAction.textContent = "Delete";
-    taskCardChild2nd.appendChild(taskCardChildAction);
+    const taskDelete = NewElement("button", "tdc-delete");
+    taskDelete.textContent = "Delete";
+    taskCardChild2nd.appendChild(taskDelete);
 
     let idCounter = 1;
     taskCardChild.setAttribute("data-id", idCounter++);
 
-    taskCardChildAction.addEventListener("click", (event) => {
+    taskDelete.addEventListener("click", (event) => {
       event.preventDefault();
-      const taskToDelete = taskCardChildAction.closest(".task-doing-child");
+      const taskToDelete = taskDelete.closest(".task-doing-child");
       if (taskToDelete) {
         taskToDelete.remove();
       }
