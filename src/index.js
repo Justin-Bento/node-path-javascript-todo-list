@@ -88,5 +88,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const taskDoingChildComplete = NewElement("button", "tdc-complete");
     taskDoingChildComplete.textContent = "Complete";
     taskDoingChild2nd.appendChild(taskDoingChildComplete);
+    function moveToComplete() {
+      console.log("Move to complete");
+    }
+    taskDoingChildComplete.addEventListener("click", moveToComplete);
   });
 });
