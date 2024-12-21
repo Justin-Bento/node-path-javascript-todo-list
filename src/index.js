@@ -55,7 +55,16 @@ document.addEventListener("DOMContentLoaded", () => {
     taskNestedContainer.appendChild(divider2);
 
     const taskUpdate = NewElement("button", "tdc-update");
-    taskUpdate.textContent = "update";
+    taskUpdate.textContent = "Update";
+    taskUpdate.style.backgroundColor = "#1d4ed8";
+    taskUpdate.style.color = "white";
+    taskUpdate.style.fontWeight = "bold";
+    taskUpdate.style.padding = "0.2rem 0.8rem";
+    taskUpdate.style.border = "none";
+    taskUpdate.style.boxShadow = "none";
+    taskUpdate.style.boxRadius = "none";
+    taskUpdate.style.fontSize = "0.75rem";
+    taskUpdate.style.lineHeight = "1rem";
     taskNestedContainer.appendChild(taskUpdate);
 
     // --------------------------------------------------
@@ -67,6 +76,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const taskDelete = NewElement("button", "tdc-delete");
     taskDelete.textContent = "Delete";
+    taskDelete.style.backgroundColor = "hsl(0, 72%, 51%)";
+    taskDelete.style.color = "white";
+    taskDelete.style.fontWeight = "bold";
+    taskDelete.style.padding = "0.2rem 0.8rem";
+    taskDelete.style.border = "none";
+    taskDelete.style.boxShadow = "none";
+    taskDelete.style.boxRadius = "none";
+    taskDelete.style.fontSize = "0.75rem";
+    taskDelete.style.lineHeight = "1rem";
     taskNestedContainer.appendChild(taskDelete);
 
     let idCounter = 1;
@@ -88,6 +106,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const taskComplete = NewElement("button", "tdc-complete");
     taskComplete.textContent = "Complete";
+    /* Tailwind CSS - Green 700 */
+    taskComplete.style.backgroundColor = "#047857";
+    taskComplete.style.color = "white";
+    taskComplete.style.fontWeight = "bold";
+    taskComplete.style.padding = "0.2rem 0.8rem";
+    taskComplete.style.border = "none";
+    taskComplete.style.boxShadow = "none";
+    taskComplete.style.boxRadius = "none";
+    taskComplete.style.fontSize = "0.75rem";
+    taskComplete.style.lineHeight = "1rem";
     taskNestedContainer.appendChild(taskComplete);
     taskComplete.addEventListener("click", () => {
       const taskToMove = taskComplete.closest(".task-doing-child");
@@ -99,7 +127,17 @@ document.addEventListener("DOMContentLoaded", () => {
         // Optional: Change the styling or remove complete button
         taskToMove.classList.remove("task-doing-child");
         taskToMove.classList.add("task-completed-child");
-        taskComplete.remove(); // Remove the complete button since task is completed
+        taskComplete.style.backgroundColor = "#a1a1aa";
+        taskUpdate.style.backgroundColor = "#a1a1aa";
+        taskDelete.style.backgroundColor = "#a1a1aa";
+        taskComplete.style.color = "white";
+        taskComplete.style.fontWeight = "bold";
+        taskComplete.style.padding = "0.2rem 0.8rem";
+        taskComplete.style.border = "none";
+        taskComplete.style.boxShadow = "none";
+        taskComplete.style.boxRadius = "none";
+        taskComplete.style.fontSize = "0.75rem";
+        taskComplete.style.lineHeight = "1rem";
       }
     });
   });
