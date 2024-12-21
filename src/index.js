@@ -19,13 +19,31 @@ document.addEventListener("DOMContentLoaded", () => {
     // --------------------------------------------------
 
     const taskContainer = NewElement("div", "task-doing-child");
+    taskContainer.style.display = "flex";
+    taskContainer.style.alignItems = "start";
+    taskContainer.style.flexDirection = "column";
+    taskContainer.style.border = "1px solid #a1a1aa";
+    taskContainer.style.margin = "1rem 0 0 0";
+    taskContainer.style.padding = "1rem 1.25rem";
+    taskContainer.style.overflow = "hidden";
+    taskContainer.style.borderRadius = "0.75rem";
+    taskContainer.style.boxShadow = "0 1px 2px 0 rgb(0 0 0 / 0.05)";
     taskCard.appendChild(taskContainer);
 
     const taskTitle = NewElement("h3", "tdc-title");
+    taskTitle.style.fontSize = "1.125rem";
+    taskTitle.style.lineHeight = "1.75rem";
+    taskTitle.style.fontWeight = "bold";
+    taskTitle.style.margin = "0";
+    taskTitle.style.padding = "0";
     taskTitle.textContent = title.value;
     taskContainer.appendChild(taskTitle);
 
     const taskDescription = NewElement("p", "tdc-description");
+    taskDescription.style.fontSize = "0.75rem";
+    taskDescription.style.lineHeight = "1.rem";
+    taskDescription.style.margin = "0";
+    taskDescription.style.padding = "0";
     taskDescription.textContent = description.value;
     taskContainer.appendChild(taskDescription);
 
@@ -138,6 +156,12 @@ document.addEventListener("DOMContentLoaded", () => {
         taskComplete.style.boxRadius = "none";
         taskComplete.style.fontSize = "0.75rem";
         taskComplete.style.lineHeight = "1rem";
+        let taskCompleteChild = document.querySelector(".task-completed-child");
+        taskCompleteChild.style.borderWidth = "1px";
+        taskCompleteChild.style.borderWidth = "1px";
+        taskCompleteChild.style.borderStyle = "solid";
+        taskCompleteChild.style.borderColor = "black";
+        taskCompleteChild.style.fontSize = "1rem";
       }
     });
   });
