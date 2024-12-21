@@ -48,6 +48,14 @@ document.addEventListener("DOMContentLoaded", () => {
     taskContainer.appendChild(taskDescription);
 
     const taskNestedContainer = NewElement("div", "task-doing-nested");
+    taskNestedContainer.style.display = "flex";
+    taskNestedContainer.style.alignItems = "center";
+    taskNestedContainer.style.gap = "0.75rem";
+    taskNestedContainer.style.margin = "0.125rem 0 0 0";
+    taskNestedContainer.style.padding = "0";
+    taskNestedContainer.style.fontSize = "0.75rem";
+    taskNestedContainer.style.lineHeight = "1.25rem";
+    taskNestedContainer.style.color = "#52525b";
     taskContainer.appendChild(taskNestedContainer);
 
     const taskContainerDate = NewElement("p", "tdc-date");
