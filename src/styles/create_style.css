@@ -166,3 +166,36 @@
   text-decoration: underline;
   background-color: #047857; /* Tailwind CSS - Green 700 */
 }
+
+.task-completed-child {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  padding: 1rem 1.25rem; /* 16px */
+  overflow: hidden;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+.task-completed-child:first-of-type {
+  margin-top: 0rem;
+}
+.task-completed-child * {
+  margin: 0rem 0rem 0rem 0rem;
+  padding: 0rem;
+}
+.task-completed-child {
+  opacity: 0.5;
+  border: 1px solid var(--gray-700);
+}
+
+.task-completed-child p {
+  font-size: 0.75rem; /* 14px */
+  line-height: 1.25rem; /* 20px */
+}
+.task-completed-child button {
+  font-size: 0.75rem; /* 12px */
+  line-height: 1rem; /* 16px */
+  padding: 0.2rem 0.8rem;
+  background-color: var(--gray-400);
+}
