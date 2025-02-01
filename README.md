@@ -6,6 +6,15 @@ In this project, I’m building an online to-do list. While the initial implemen
 - Project Completed
 - Project Link - [Node Path Javascript Todo List](https://www.theodinproject.com/lessons/node-path-javascript-todo-list)
 
+## Features
+
+- Live previews
+- Preform CRUD actions with local storage
+  - However I still don't know how to update information at this moment.
+- Add due date's to all tasks.
+- Change priority of tasks based on their severity.
+
+
 ## Technologies
 
 - HTML-5 (HyperText Markup Lauguage 5)
